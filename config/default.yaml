@@ -1,0 +1,10 @@
+dataset:
+  train_file_list: ???
+  valid_file_list: ???
+  base_folder: ???
+  attr_names:
+    crepe: .npy
+    whisper: .npy
+  dataloader_args:
+    batch_size: 16
+    
