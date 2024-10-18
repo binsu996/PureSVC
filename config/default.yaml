@@ -1,10 +1,19 @@
 dataset:
-  train_file_list: ???
-  valid_file_list: ???
-  base_folder: ???
+  train_file_list: exp_folder/train_list_file
+  train_batch_size: 16
+  valid_file_list: exp_folder/valid_list_file
+  valid_batch_size: 4
+  base_folder: /data/dsmdla100sx0213/subin/datasets/osc_data
   attr_names:
-    crepe: .npy
-    whisper: .npy
+    crepe: .pit.npy
+    whisper: .ppg.npy
+    cam: .npy
+    specs: .pt
   dataloader_args:
-    batch_size: 16
+    num_workers: 32
+    drop_last: true
+
+hydra:
+  run:
+    dir: ./exp_folder/default
     
